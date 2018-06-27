@@ -112,9 +112,10 @@ td{
     font-size: 75%;
     font-weight: normal;
     color: darkseagreen;
-    font-family: 'Open Sans', sans-serif;            
+    font-family: 'Open Sans', sans-serif;      
     cursor: pointer;
     margin-right : 4%
+    margin-left: 4%
 }
 
 .cancel-button, .fa-times{
