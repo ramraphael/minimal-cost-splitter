@@ -1,0 +1,206 @@
+body, html{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 110%;
+    line-height: 1.6;
+}
+
+/* Hide every "window" after the first one until needed */
+#billRequest, #tipRequest, #nameRequest, #splitBills{
+    display: none;
+}
+
+/* Every forward button has the same styling */
+.forwardButton{
+    background: coral;
+    padding: 1em 2em;
+    color: #fff;
+    border: 1px solid #cd5b45;
+    font-size: 75%;
+}
+
+/* Back button also has the same styling */
+.backButton{
+    background-color: white;
+    padding: 1em 2em;
+    color: black;
+    border: 1px solid #000000; /* Green */
+    font-size: 75%;
+}
+
+/* Every modal window except the last screen should be perfectly centered */
+.modal{    
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    animation-name: modalopen;
+    animation-duration: 750ms;
+}
+
+.modal-content{
+    background-color: #fff;
+    margin: 0 auto;
+    /* padding :20px; */
+    width: 80%;
+    /* box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2), 0 7px 20px 0 rgba(0,0,0,0.2); */
+}
+
+.modal-header{
+    text-align: center;
+}
+
+#finalScreenTotalBill{
+    font-weight: bold;
+}
+
+table, tr, td{
+    /* border: 2px solid black; */
+    text-align: center;
+    border-collapse: collapse;
+    margin-top: 2%;
+    width: 75%;
+}
+
+td{    
+    height: 50%;
+    width: 50%;
+}
+
+.splitbills{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    animation-name: modalopen;
+    animation-duration: 750ms;
+}
+
+.split-header{
+    text-align: center;
+    font-size: 200%
+}
+
+.splitbills-content{
+    background-color: #fff;
+    text-align: center;
+    margin: 0 auto;
+    padding :20px;
+    width: 80%;
+    overflow: auto;
+    /* box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2), 0 7px 20px 0 rgba(0,0,0,0.2); */
+}
+
+.individul-split{
+    display: block;
+    background-color: #fff;
+    margin: 5% auto;
+    padding :20px;
+    width: 60%;
+    height: 350px;
+    box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2), 0 7px 20px 0 rgba(0,0,0,0.2);
+}
+
+.edit-button{
+    font-size: 50%;
+    font-weight: normal;
+    color: #cd5b45;
+    font-family: 'Open Sans', sans-serif;            
+    cursor: pointer;
+    margin-left: 3%;
+}
+
+.save-button, .fa-check{
+    display: none;
+    font-size: 75%;
+    font-weight: normal;
+    color: darkseagreen;
+    font-family: 'Open Sans', sans-serif;            
+    cursor: pointer;
+    margin-right : 4%
+}
+
+.cancel-button, .fa-times{
+    display: none;
+    font-size: 75%;
+    font-weight: normal;
+    color: darkred;
+    font-family: 'Open Sans', sans-serif;            
+    cursor: pointer;    
+}
+
+/* .money-owed:focus, .bill-percentage:focus{
+    padding: 1% 3% 1% 3%;
+    margin-right: 3%;
+    box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2), 0 7px 20px 0 rgba(0,0,0,0.2);
+} */
+
+@keyframes modalopen{
+    from{ opacity: 0 }
+    to{ opacity: 750ms}
+}
+
+h1{
+    text-align: center;    
+    font-family: 'Open Sans Condensed', sans-serif;        
+    font-weight: bold;
+}
+
+h2{
+    font-family: 'Open Sans', sans-serif;        
+    font-weight: normal;
+    font-size: 100%;
+}
+
+button{
+    text-align: center;    
+    font-family: 'Open Sans', sans-serif;    
+    font-size: 65%;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+input{
+    text-align: center;
+    font-size: 90%;
+    width:30%;    
+    padding-top: 1%;
+    padding-bottom: 1%;
+    margin-top: 1%;
+    margin-bottom: 3%;
+}
+
+/* The slider itself */
+.slider {
+    -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    border-radius: 5px;
+    width: 100%; /* Full-width */
+    height: 15px; /* Specified height */
+    background: #d3d3d3; /* Grey background */
+    outline: none; /* Remove outline */
+    opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+    transition: opacity .2s;
+}
+
+/* Mouse-over effects */
+.slider:hover {
+    opacity: 1; /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */ 
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    border-radius: 50%; 
+    width: 30px; /* Set a specific slider handle width */
+    height: 30px; /* Slider handle height */
+    background: coral; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+}
+
+.slider::-moz-range-thumb {
+    border-radius: 50%; 
+    width: 30px; /* Set a specific slider handle width */
+    height: 30px; /* Slider handle height */
+    background: coral; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+}

@@ -1,0 +1,71 @@
+<head>
+    <title>Minimal Cost Splitter</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Open+Sans+Condensed:300" rel="stylesheet">    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+</head>
+
+<body>    
+
+    <div id="introSplash" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">                    
+                    <h1 style="font-weight: bold;">Welcome to Cost Splitter</h1>
+                    <h2>by Raphael Ram</h2>
+                    <button id="startSplitter" class="forwardButton">Start</button>                    
+            </div>            
+        </div>
+    </div>
+
+    <div id="billRequest" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                    <h1>Total On Bill</h1>                    
+                    <h2>Enter the total amount in your bill:</h2>
+                    <input id="billWithoutTip" type="text" placeholder="Enter your total bill"> </br>
+                    <button id="submitBill" class="forwardButton">Submit</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="tipRequest" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1>Tip Percentage (optional)</h1>                
+                <h2>Enter your desired tip percentage:</h2>                
+                <input id="tipPercentage" type="text" placeholder="Enter your desired tip percentage"> </br>
+                <button id="goBack1" class="backButton">&#x2190 Go Back</button>  <button id="submitTip" class="forwardButton">Submit</button>
+            </div>
+        </div>
+    </div>    
+
+    <div id="nameRequest" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1>Enter the names of your party members</h1>                
+                <h2>Only first names, separated by a comma or space</h2>
+                <input id="partyNames" type="text" placeholder="Enter names"> </br>
+                <button id="goBack2" class="backButton">&#x2190 Go Back</button>  <button id="submitNames" class="forwardButton">Split Bill</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="splitBills" class="split-bills">
+        <div class="splitbills-content">
+            <div class="modal-header">
+                <h1>Your bill has been split!</h1>
+                <h2>Feel free to change what each party member owes</h2>
+                <h2 id="finalTotalBill">The total bill (with tip) is: </h2>
+            </div>
+            <table id="split-table" align="center">                
+            </table>
+            <button id="goBack3" class="backButton">&#x2190 Go Back</button>
+        </div>        
+    </div>
+
+</body>
+
+<footer>
+    <script src="main.js"></script>
+</footer>
