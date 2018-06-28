@@ -2,6 +2,7 @@ body, html{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 110%;
     line-height: 1.6;
+    color: #443d3c;
 }
 
 /* Hide every "window" after the first one until needed */
@@ -9,22 +10,34 @@ body, html{
     display: none;
 }
 
+button{
+    border-radius: 3px;
+    rgba(255,255,255,0.9);
+    text-align: center;    
+    font-family: 'Open Sans', sans-serif;    
+    font-size: 65%;
+    font-weight: bold;
+    cursor: pointer;
+}
+
 /* Every forward button has the same styling */
-.forwardButton{
+.backButton{
     background: coral;
     padding: 1em 2em;
     color: #fff;
-    border: 1px solid #cd5b45;
+    border: 1px solid #cd5b45;    
     font-size: 75%;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.2);
 }
 
 /* Back button also has the same styling */
-.backButton{
-    background-color: white;
+.forwardButton{
+    background:#3fa5ca;
     padding: 1em 2em;
-    color: black;
-    border: 1px solid #000000; /* Green */
+    color: white;
+    border: 1px solid #266379; /* Green */
     font-size: 75%;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.2);
 }
 
 /* Every modal window except the last screen should be perfectly centered */
@@ -52,11 +65,15 @@ body, html{
     font-weight: bold;
 }
 
+table{
+    margin-bottom: 2%;
+}
+
 table, tr, td{
     /* border: 2px solid black; */
     text-align: center;
     border-collapse: collapse;
-    margin-top: 2%;
+    margin-top: 2%;    
     width: 75%;
 }
 
@@ -65,17 +82,21 @@ td{
     width: 50%;
 }
 
+.splitanimation{
+    animation-name: modalopen;
+    animation-duration: 1000ms;
+}
+
 .splitbills{
     position: relative;
     top: 50%;
-    transform: translateY(-50%);
-    animation-name: modalopen;
-    animation-duration: 750ms;
+    transform: translateY(-50%);    
 }
 
 .split-header{
     text-align: center;
-    font-size: 200%
+    font-size: 200%;
+    height: 50%;
 }
 
 .splitbills-content{
@@ -88,19 +109,21 @@ td{
     /* box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2), 0 7px 20px 0 rgba(0,0,0,0.2); */
 }
 
-.individul-split{
+.individual-split{
     display: block;
     background-color: #fff;
+    border-radius: 5px;
+    border-top: 10px solid #3489a8;
     margin: 5% auto;
     padding :20px;
     width: 60%;
     height: 350px;
-    box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2), 0 7px 20px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 5px 8px 0 rgba(68,61,60,0.2), 0 7px 20px 0 rgba(68,61,60,0.2);
 }
 
 .edit-button{
     font-size: 50%;
-    font-weight: normal;
+    font-weight: bold;
     color: #cd5b45;
     font-family: 'Open Sans', sans-serif;            
     cursor: pointer;
@@ -114,8 +137,8 @@ td{
     color: darkseagreen;
     font-family: 'Open Sans', sans-serif;      
     cursor: pointer;
-    margin-right : 4%
-    margin-left: 4%
+    margin-right : 4%;
+    margin-left: 4%;
 }
 
 .cancel-button, .fa-times{
@@ -138,24 +161,22 @@ td{
     to{ opacity: 750ms}
 }
 
+@keyframes splitopen{
+    from{ opacity: 0 }
+    to{ opacity: 750ms}
+}
+
 h1{
     text-align: center;    
     font-family: 'Open Sans Condensed', sans-serif;        
     font-weight: bold;
+    overflow: auto;
 }
 
 h2{
     font-family: 'Open Sans', sans-serif;        
     font-weight: normal;
     font-size: 100%;
-}
-
-button{
-    text-align: center;    
-    font-family: 'Open Sans', sans-serif;    
-    font-size: 65%;
-    font-weight: normal;
-    cursor: pointer;
 }
 
 input{
@@ -166,42 +187,6 @@ input{
     padding-bottom: 1%;
     margin-top: 1%;
     margin-bottom: 3%;
-}
-
-/* The slider itself */
-.slider {
-    -webkit-appearance: none;  /* Override default CSS styles */
-    appearance: none;
-    border-radius: 5px;
-    width: 100%; /* Full-width */
-    height: 15px; /* Specified height */
-    background: #d3d3d3; /* Grey background */
-    outline: none; /* Remove outline */
-    opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
-    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
-    transition: opacity .2s;
-}
-
-/* Mouse-over effects */
-.slider:hover {
-    opacity: 1; /* Fully shown on mouse-over */
-}
-
-/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */ 
-.slider::-webkit-slider-thumb {
-    -webkit-appearance: none; /* Override default look */
-    appearance: none;
-    border-radius: 50%; 
-    width: 30px; /* Set a specific slider handle width */
-    height: 30px; /* Slider handle height */
-    background: coral; /* Green background */
-    cursor: pointer; /* Cursor on hover */
-}
-
-.slider::-moz-range-thumb {
-    border-radius: 50%; 
-    width: 30px; /* Set a specific slider handle width */
-    height: 30px; /* Slider handle height */
-    background: coral; /* Green background */
-    cursor: pointer; /* Cursor on hover */
+    border-radius: 3px;
+    border: 1px solid #443d3c;
 }
