@@ -12,19 +12,18 @@ body, html{
 
 button{
     border-radius: 3px;
-    rgba(255,255,255,0.9);
     text-align: center;    
     font-family: 'Open Sans', sans-serif;    
     font-size: 65%;
     font-weight: bold;
-    cursor: pointer;
+    cursor: pointer    
 }
 
 /* Every forward button has the same styling */
 .backButton{
     background: coral;
     padding: 1em 2em;
-    color: #fff;
+    color: rgba(255,255,255,0.9);
     border: 1px solid #cd5b45;    
     font-size: 75%;
     text-shadow: 0 1px 2px rgba(0,0,0,0.2);
@@ -34,9 +33,9 @@ button{
 .forwardButton{
     background:#3fa5ca;
     padding: 1em 2em;
-    color: white;
+    color: rgba(255,255,255,0.9);
     border: 1px solid #266379; /* Green */
-    font-size: 75%;
+    font-size: 75%;    
     text-shadow: 0 1px 2px rgba(0,0,0,0.2);
 }
 
