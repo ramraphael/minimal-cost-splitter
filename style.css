@@ -178,6 +178,13 @@ h2{
     font-size: 100%;
 }
 
+h3{
+    margin-top: 2%;
+    font-family: 'Open Sans', sans-serif;        
+    font-weight: normal;
+    font-size: 80%;
+}
+
 input{
     text-align: center;
     font-size: 90%;
